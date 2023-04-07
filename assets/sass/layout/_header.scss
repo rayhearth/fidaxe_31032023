@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/bg_header.png);
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            li {
+            }
+        }
+    }
+}
