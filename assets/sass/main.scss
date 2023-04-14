@@ -1,6 +1,7 @@
 @import "./_utils/variables";
 @import "./_utils/mixins";
 @import "./base/_reset";
+@import "./components/_cards";
 
 @import "./layout/_header";
-@import "./page/index";
+@import "./page/_home";

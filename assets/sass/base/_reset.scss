@@ -8,52 +8,46 @@
 body {
     font-family: "DM Sans", "Lato", "Roboto", sans-serif;
     margin: 0 auto;
-    scrollbar-width: thin; /* "auto" or "thin" */
-    scrollbar-color: transparent; /* scroll thumb and track */
-    ::-webkit-scrollbar {
-        width: 0.625rem;
-    }
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-        background-color: transparent;
-    }
 }
 
 main {
     width: 100%;
-    max-width: 77.5rem;
+    // max-width: 77.5rem;
     margin: 0 auto;
-    padding: 0 2%;
-    .hidden {
-        position: absolute;
-        width: 0.063rem;
-        height: 0.063rem;
-        overflow: hidden;
-        opacity: 0;
-        z-index: -9999px;
-    }
+    // padding: 0 2%;
+    // .hidden {
+    //     position: absolute;
+    //     width: 0.063rem;
+    //     height: 0.063rem;
+    //     overflow: hidden;
+    //     opacity: 0;
+    //     z-index: -9999px;
+    // }
 }
 
 h1 {
     font-family: "DM Sans";
     font-weight: 700;
-    font-size: 36px;
+    font-size: 4rem;
     line-height: 47px;
+    color: white;
 }
 
 h2 {
     font-family: "Lato";
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 48px;
+    color: $dark-blue;
 }
 
 h3 {
     font-size: 14px;
     font-weight: 700;
     color: white;
+}
+
+section {
+    padding: 70px;
 }
 
 a,
