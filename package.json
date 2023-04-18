@@ -1,0 +1,23 @@
+{
+  "name": "fidaxe",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/main.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayhearth/fidaxe_31032023.git"
+  },
+  "author": "Emmanuelle Jupon",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.13.0",
+    "node-sass": "^8.0.0",
+    "nonpm": "^0.1.0",
+    "sass": "^1.62.0"
+  }
+}

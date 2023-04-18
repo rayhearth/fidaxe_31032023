@@ -3,20 +3,28 @@
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
-    width: 400px;
+    width: 25rem;
     box-shadow: 5px 5px 20px $dark-blue;
     .title_card {
         background-color: $dark-blue;
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 10px;
+        align-items: flex-start;
+        padding: 1.25rem 2.5rem;
+        gap: 50px;
         height: 130px;
-        h3 {
-            color: $green;
-            font-size: 20px;
-            span {
-                color: $orange;
+        .tit {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                color: $green;
+                font-size: 20px;
+            }
+            .subtitle {
+                text-indent: 23%;
+                span {
+                    color: $orange;
+                }
             }
         }
         img {
