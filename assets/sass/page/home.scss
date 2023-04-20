@@ -1,23 +1,38 @@
 .presentation {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     .container {
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
         .left {
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
+            width: 50%;
             img {
                 max-width: 100%;
             }
+        }
+        .right {
+            width: 50%;
         }
     }
 }
 
 .Competences {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    background-image: url("../img/bgMetier.png");
+    background-size: cover;
+    flex-direction: column;
+    h2 {
+        color: $light;
+    }
+    .cards-comp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
