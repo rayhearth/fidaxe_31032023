@@ -1,8 +1,8 @@
 .cards {
     display: flex;
     flex-direction: column;
-    margin-top: 1.25rem;
-    width: 26rem;
+    // margin-top: 1.25rem;
+    // width: 26rem;
     height: 25rem;
     box-shadow: 5px 5px 1.25rem $dark-blue;
     .title_card {
@@ -11,8 +11,8 @@
         justify-content: center;
         align-items: flex-start;
         padding: 1.25rem 2.5rem;
-        gap: 3.125rem;
-        height: 8.125rem;
+        // gap: 3.125rem;
+        // height: 8.125rem;
         .tit {
             display: flex;
             flex-direction: column;

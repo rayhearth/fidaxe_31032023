@@ -71,8 +71,6 @@ img {
 .cards {
   display: flex;
   flex-direction: column;
-  margin-top: 1.25rem;
-  width: 26rem;
   height: 25rem;
   box-shadow: 5px 5px 1.25rem #003764;
 }
@@ -82,8 +80,6 @@ img {
   justify-content: center;
   align-items: flex-start;
   padding: 1.25rem 2.5rem;
-  gap: 3.125rem;
-  height: 8.125rem;
 }
 .cards .title_card .tit {
   display: flex;
@@ -178,17 +174,14 @@ header .title .function p span {
 .presentation {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1.25rem;
 }
 .presentation .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 1.25rem;
 }
 .presentation .container .left {
-  display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   width: 50%;
 }
@@ -209,9 +202,9 @@ header .title .function p span {
   color: #f7f0f5;
 }
 .Competences .cards-comp {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
