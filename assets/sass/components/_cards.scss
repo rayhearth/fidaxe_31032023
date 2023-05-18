@@ -8,12 +8,13 @@
     .title_card {
         background-color: $dark-blue;
         display: flex;
+        gap: 1.25rem;
         justify-content: center;
         align-items: flex-start;
         padding: 1.25rem 2.5rem;
         // gap: 3.125rem;
-        // height: 8.125rem;
-        .tit {
+        height: 30%;
+        .title {
             display: flex;
             flex-direction: column;
             h3 {
@@ -21,7 +22,6 @@
                 font-size: 1.25rem;
             }
             .subtitle {
-                text-indent: 23%;
                 span {
                     color: $orange;
                 }
@@ -29,6 +29,7 @@
         }
         img {
             width: 4.063rem;
+            height: 3.75rem;
         }
     }
     .text {

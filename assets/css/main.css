@@ -37,7 +37,7 @@ h3 {
 }
 
 section {
-  padding: 70px;
+  padding: 50px;
 }
 
 a,
@@ -77,26 +77,26 @@ img {
 .cards .title_card {
   background-color: #003764;
   display: flex;
+  gap: 1.25rem;
   justify-content: center;
   align-items: flex-start;
   padding: 1.25rem 2.5rem;
+  height: 30%;
 }
-.cards .title_card .tit {
+.cards .title_card .title {
   display: flex;
   flex-direction: column;
 }
-.cards .title_card .tit h3 {
+.cards .title_card .title h3 {
   color: #96e6b3;
   font-size: 1.25rem;
 }
-.cards .title_card .tit .subtitle {
-  text-indent: 23%;
-}
-.cards .title_card .tit .subtitle span {
+.cards .title_card .title .subtitle span {
   color: #ef767a;
 }
 .cards .title_card img {
   width: 4.063rem;
+  height: 3.75rem;
 }
 .cards .text {
   background-color: #f7f0f5;
@@ -148,7 +148,7 @@ header .title {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 6.25rem;
+  height: 70%;
 }
 header .title .function {
   display: flex;
@@ -175,11 +175,14 @@ header .title .function p span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.25rem;
+  background-image: url("../img/bg-about.png");
+  background-size: cover;
 }
 .presentation .container {
   display: flex;
   gap: 1.25rem;
+  padding: 50px 0;
+  z-index: 2;
 }
 .presentation .container .left {
   flex-direction: column;
@@ -203,8 +206,9 @@ header .title .function p span {
 }
 .Competences .cards-comp {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1.25rem;
+  padding: 50px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

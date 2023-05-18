@@ -2,11 +2,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.25rem;
+    background-image: url("../img/bg-about.png");
+    background-size: cover;
+    // position: relative;
+    // &::before {
+    //     content: url("../img/top-about.png");
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    // }
+    // &::after {
+    //     content: url("../img/bottom-about.png");
+    //     position: absolute;
+    //     bottom: -6px;
+    //     right: 0;
+    // }
     .container {
         display: flex;
         // align-items: center;
         gap: 1.25rem;
+        padding: 50px 0;
+        z-index: 2;
         .left {
             flex-direction: column;
             width: 50%;
@@ -34,7 +50,8 @@
     }
     .cards-comp {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 1.25rem;
+        padding: 50px 0;
     }
 }
