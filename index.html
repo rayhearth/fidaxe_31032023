@@ -31,17 +31,22 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Accueil</li>
-                <li>Présentation</li>
-                <li>Compétences</li>
-                <li>Outils</li>
-                <li>Métiers</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <header id="accueil">
+        <div class="main-nav">
+            <div class="logo">
+                <img src="./assets/img/LOGO_FIDAXE.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a> </li>
+                    <li><a href="#présentation">Présentation</a> </li>
+                    <li><a href="#competences">Compétences</a> </li>
+                    <li><a href="#outils">Outils</a> </li>
+                    <li><a href="#secteurs">Secteurs</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>
         <div class="title">
             <h1 id="first-title">Fidaxe</h1>
             <div class="function">
@@ -53,7 +58,8 @@
         </div>
     </header>
     <main>
-        <section class="presentation">
+        <!-- --------------------PRESENTATION-------------------- -->
+        <section class="presentation" id="présentation">
 
             <h2>Qui sommes nous ?</h2>
             <div class="container">
@@ -99,7 +105,9 @@
                 </div>
             </div>
         </section>
-        <section class="Competences">
+
+        <!-- --------------------COMPETENCES-------------------- -->
+        <section class="Competences" id="competences">
             <h2>Notre mission , notre expertise à votre service</h2>
             <div class="cards-comp">
                 <articles class="cards comptabilité">
@@ -265,7 +273,8 @@
 
         </section>
 
-        <section class="solutions">
+        <!-- --------------------SOLUTIONS-------------------- -->
+        <section class="outils" id="outils">
             <h2>Nos Solutions en ligne</h2>
             <div class="intro">
                 <p>Vous recherchez une solution pour nous transmettre vos documents numérisés de manière sécurisée ?
@@ -319,12 +328,14 @@
 
         </section>
 
-        <section class="secteurs">
+        <!-- --------------------METIERS-------------------- -->
+        <section class="secteurs" id="secteurs">
             <h2>Nos secteurs d’activité</h2>
             <img src="./assets/img/secteur_act.png" alt="">
         </section>
 
-        <section class="contact">
+        <!-- --------------------CONTACT-------------------- -->
+        <section class="contact" id="contact">
             <h2>Contact</h2>
 
             <div class="texte">

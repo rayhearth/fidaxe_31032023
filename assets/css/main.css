@@ -104,37 +104,38 @@ img {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-image: url("../img/bg_header.png");
   background-size: cover;
   height: 100vh;
 }
-header nav {
-  width: 100%;
+header .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .main-nav nav {
+  max-width: 100%;
   padding: 0 1.25rem;
 }
-header nav ul {
+header .main-nav nav ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-header nav ul li {
+header .main-nav nav ul li a {
+  position: relative;
+  transition: all 0.3s ease-in-out;
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
   padding: 1.25rem;
-  position: relative;
-  transition: all 0.3s ease-in-out;
 }
-header nav ul li:hover {
+header .main-nav nav ul li a:hover {
   background-color: #96e6b3;
   color: #003764;
   transition: all 0.3s ease-in-out;
 }
-header nav ul li:hover::after {
+header .main-nav nav ul li a:hover::after {
   position: absolute;
   content: "";
   bottom: -1.563rem;
@@ -146,22 +147,35 @@ header nav ul li:hover::after {
 header .title {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   height: 70%;
 }
 header .title .function {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  align-content: center;
   margin-top: 6.25rem;
   position: relative;
 }
-header .title .function::after {
+header .title .function::before, header .title .function::after {
   position: absolute;
-  content: url("../img/cadre.png");
-  top: -100%;
-  left: -25%;
+  content: "";
+}
+header .title .function::before {
+  border-bottom: 2px solid #96e6b3;
+  border-left: 2px solid #96e6b3;
+  width: 60%;
+  height: 180%;
+  left: -60px;
+  bottom: -50px;
+}
+header .title .function::after {
+  border-top: 2px solid #96e6b3;
+  border-right: 2px solid #96e6b3;
+  width: 60%;
+  height: 180%;
+  top: -125px;
+  right: -60px;
 }
 header .title .function p {
   color: white;
