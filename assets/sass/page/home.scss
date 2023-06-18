@@ -19,13 +19,13 @@
     // }
     .container {
         display: flex;
+        flex-wrap: wrap;
         // align-items: center;
         gap: 1.25rem;
         padding: 50px 0;
         z-index: 2;
         .left {
             flex-direction: column;
-            width: 50%;
             // display: flex;
             // justify-content: flex-start;
             // flex-direction: column;
@@ -33,9 +33,6 @@
             img {
                 max-width: 100%;
             }
-        }
-        .right {
-            width: 50%;
         }
     }
 }
@@ -53,5 +50,65 @@
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 1.25rem;
         padding: 50px 0;
+    }
+}
+
+.outils {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "solutions solutions"
+        "intro intro"
+        "dispo security"
+        "simplicity economie";
+    .solutions {
+        grid-area: solutions;
+    }
+    .intro {
+        grid-area: intro;
+    }
+    .dispo {
+        grid-area: dispo;
+    }
+    .security {
+        grid-area: security;
+    }
+    .simplicity {
+        grid-area: simplicity;
+    }
+    .economie {
+        grid-area: economie;
+    }
+}
+
+.secteurs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    iframe {
+        padding: 20px;
+        width: calc(50% - 5px);
+    }
+    .texte {
+        margin: 20px 0;
+        width: calc(50% - 5px);
+        border-top: 2px solid $green;
+        border-top-width: 100%;
+        border-bottom: 2px solid $green;
+        border-bottom-width: 100%;
     }
 }

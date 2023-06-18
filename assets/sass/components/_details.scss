@@ -1,0 +1,17 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 2%;
+        h3 {
+            color: $dark-blue;
+            font-size: 1.875rem;
+        }
+    }
+    .text {
+        color: $grey;
+        margin-top: 2%;
+    }
+}
