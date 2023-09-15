@@ -9,6 +9,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        img {
+            height: 3.75rem;
+            margin-top: 0.5rem;
+        }
         nav {
             max-width: 100%;
             padding: 0 1.25rem;

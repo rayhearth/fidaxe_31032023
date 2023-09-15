@@ -11,33 +11,34 @@ body {
 }
 
 main {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
   font-family: "DM Sans";
   font-weight: 700;
   font-size: 4rem;
-  line-height: 47px;
+  line-height: 3rem;
   color: white;
 }
 
 h2 {
   font-family: "Lato";
   font-weight: 400;
-  font-size: 48px;
+  font-size: 3rem;
   color: #003764;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #96e6b3;
 }
 
 section {
-  padding: 50px;
+  padding: 3.125rem;
 }
 
 a,
@@ -102,6 +103,12 @@ img {
   background-color: #f7f0f5;
   height: 100%;
 }
+.cards .text ul {
+  padding: 1rem;
+}
+.cards .text ul li {
+  line-height: 1.5rem;
+}
 
 .details {
   display: flex;
@@ -133,6 +140,10 @@ header .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+header .main-nav img {
+  height: 3.75rem;
+  margin-top: 0.5rem;
 }
 header .main-nav nav {
   max-width: 100%;
@@ -207,17 +218,24 @@ header .title .function p span {
 }
 
 .presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  width: 100%;
   background-image: url("../img/bg-about.png");
   background-size: cover;
 }
 .presentation .container {
+  max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
-  padding: 50px 0;
+  padding: 3.125rem 0;
   z-index: 2;
 }
 .presentation .container .left {
@@ -228,7 +246,11 @@ header .title .function p span {
 }
 
 .Competences {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  width: 100%;
   background-image: url("../img/bgMetier.png");
   background-size: cover;
   flex-direction: column;
@@ -239,11 +261,12 @@ header .title .function p span {
 .Competences .cards-comp {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 1.25rem;
+  grid-gap: 2rem;
   padding: 50px 0;
 }
 
 .outils {
+  max-width: 1280px;
   display: grid;
   width: 100%;
   grid-template-rows: 1fr 1fr;
@@ -270,14 +293,15 @@ header .title .function p span {
 }
 
 .secteurs {
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
 }
 .secteurs img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 60%;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .contact {
@@ -297,6 +321,4 @@ header .title .function p span {
   border-top-width: 100%;
   border-bottom: 2px solid #96e6b3;
   border-bottom-width: 100%;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
