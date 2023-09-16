@@ -71,6 +71,11 @@ h3 {
   color: #96e6b3;
 }
 
+p {
+  font-size: 1rem;
+  color: #8c8c8c;
+}
+
 section {
   padding: 3.125rem;
 }
@@ -165,7 +170,7 @@ img {
 header {
   background-image: url("../img/bg_header.png");
   background-size: cover;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,7 +197,7 @@ header .main-nav nav ul li a {
   position: relative;
   transition: all 0.3s ease-in-out;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 1.25rem;
 }
@@ -260,6 +265,9 @@ header .title .function p span {
   background-image: url("../img/bg-about.png");
   background-size: cover;
 }
+.presentation h2 {
+  padding: 0 2.5rem;
+}
 .presentation .container {
   max-width: 1280px;
   display: grid;
@@ -267,9 +275,10 @@ header .title .function p span {
   gap: 1.25rem;
   padding: 3.125rem 0;
   z-index: 2;
+  padding: 0 2.5rem;
 }
-.presentation .container .left {
-  flex-direction: column;
+.presentation .container p {
+  padding: 0.5rem 0;
 }
 .presentation .container .left img {
   max-width: 100%;
@@ -278,11 +287,9 @@ header .title .function p span {
   display: flex;
   flex-direction: column;
 }
-.presentation .container .right p {
-  padding: 0.5rem 0;
-}
 .presentation .container .right a {
   align-self: flex-end;
+  min-height: 2.5rem;
   background-color: #96e6b3;
   color: #003764;
   padding: 0.5rem 1.25rem;
@@ -294,19 +301,24 @@ header .title .function p span {
 }
 
 .Competences {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   width: 100%;
   background-image: url("../img/bgMetier.png");
   background-size: cover;
 }
-.Competences h2 {
+.Competences .section-container {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  padding: 0 2.5rem;
+}
+.Competences .section-container h2 {
   color: #f7f0f5;
 }
-.Competences .cards-comp {
+.Competences .section-container .cards-comp {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
   grid-gap: 2rem;
   padding: 3.125rem 0;
 }
@@ -398,7 +410,7 @@ header .title .function p span {
 .contact .container .texte .call .callToAction {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 0.75rem;
   padding-top: 1.25rem;
   justify-content: space-between;
 }
@@ -410,6 +422,7 @@ header .title .function p span {
   padding: 0 1.25rem;
   border-radius: 0.625rem;
   width: 15.875rem;
+  min-height: 2.5rem;
   font-family: "montserrat";
   font-weight: 500;
   color: #003764;
@@ -438,7 +451,8 @@ footer {
 footer img {
   height: 3.75rem;
 }
-footer p, footer a {
+footer p,
+footer a {
   color: #96e6b3;
   font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */

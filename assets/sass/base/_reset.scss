@@ -1,12 +1,12 @@
 /*Font Family*/
 
 @font-face {
-    font-family: 'didactGothic';
+    font-family: "didactGothic";
     src: url(../font/DidactGothic-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'montserrat';
+    font-family: "montserrat";
     src: url(../font/Montserrat-VariableFont_wght.ttf);
 }
 
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family:"montserrat", "didactGothic", "DM Sans", "Lato", "Roboto", sans-serif;
+    font-family: "montserrat", "didactGothic", "DM Sans", "Lato", "Roboto", sans-serif;
     margin: 0 auto;
 }
 
@@ -48,6 +48,11 @@ h3 {
     font-size: 1.25rem;
     font-weight: 700;
     color: $green;
+}
+
+p {
+    font-size: 1rem;
+    color: $grey;
 }
 
 section {
