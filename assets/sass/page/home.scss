@@ -8,12 +8,8 @@
     background-size: cover;
     .container {
         max-width: 1280px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap: 1.25rem;
         padding: 3.125rem 0;
         z-index: 2;
@@ -23,6 +19,24 @@
                 max-width: 100%;
             }
         }
+        .right{
+            display: flex;
+            flex-direction: column;
+            p{
+                padding: 0.5rem 0;
+            }
+                a{
+                    align-self: flex-end;
+                    background-color: $green;
+                    color: $dark-blue;
+                    padding: 0.5rem 1.25rem;
+                    border-radius: 0.625rem;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        transform: translateY(-.25rem);
+                    }
+                }
+        }
     }
 }
 
@@ -30,11 +44,9 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    justify-content: center;
     width: 100%;
     background-image: url("../img/bgMetier.png");
     background-size: cover;
-    flex-direction: column;
     h2 {
         color: $light;
     }
@@ -42,7 +54,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 2rem;
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
 }
 
@@ -90,20 +102,94 @@
 }
 
 .contact {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 100px 0;
-    iframe {
-        padding: 20px;
-        width: calc(50% - 5px);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    width: 100%;
+    background-image: url("../img/bg-contact.png");
+    background-size: cover;
+    padding: 6.25rem 1.25rem;
+    h2{
+        color: $light;
     }
-    .texte {
-        margin: 20px 0;
-        width: calc(50% - 5px);
-        border-top: 2px solid $green;
-        border-top-width: 100%;
-        border-bottom: 2px solid $green;
-        border-bottom-width: 100%;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+        iframe {
+            padding: 1.25rem 0;
+            width: 50%;
+        }
+        .texte {
+            margin: 1.25rem 0;
+            padding: 1.25rem 0;
+            width: 50%;
+            border-top:0.125rem solid $green;
+            border-bottom: 0.125rem solid $green;
+            .icon{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                h3{
+                    color: $light;
+                    font-size:2rem;
+                    font-weight: 400;
+                }
+            }
+            .adr{
+                padding: 1.25rem 0;
+            }
+            .call{
+                padding: 1.25rem 0;
+                .callToAction{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.25rem;
+                    padding-top: 1.25rem;
+                    justify-content: space-between;
+                    a{
+                        background-color: $green;
+                        display: flex;
+                        align-items: center;
+                        gap: 1.25rem;
+                        padding: 0 1.25rem;
+                        border-radius: 0.625rem;
+                        width: 15.875rem;
+                        font-family: 'montserrat';
+                        font-weight: 500;
+                        color: $dark-blue;
+                        img{
+                            max-height: 2.5rem;
+                            max-width: 2.188rem;
+                            animation: wiggle 2s linear infinite;
+                        }
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            transform: translateY(-.25rem);
+                        }
+                    }
+                }
+            }
+            p{
+                color: $light;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 0;
+    img{
+        height: 3.75rem;
+    }
+    p, a{
+        color: $green;
+        font-size: 1rem;
     }
 }

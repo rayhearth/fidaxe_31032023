@@ -1,3 +1,36 @@
+/* Keyframes */
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+/*Font Family*/
+@font-face {
+  font-family: "didactGothic";
+  src: url(../font/DidactGothic-Regular.ttf);
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
 /*****RESET*****/
 * {
   margin: 0;
@@ -6,7 +39,7 @@
 }
 
 body {
-  font-family: "DM Sans", "Lato", "Roboto", sans-serif;
+  font-family: "montserrat", "didactGothic", "DM Sans", "Lato", "Roboto", sans-serif;
   margin: 0 auto;
 }
 
@@ -17,7 +50,7 @@ main {
 }
 
 h1 {
-  font-family: "DM Sans";
+  font-family: "didactGothic";
   font-weight: 700;
   font-size: 4rem;
   line-height: 3rem;
@@ -25,13 +58,14 @@ h1 {
 }
 
 h2 {
-  font-family: "Lato";
+  font-family: "didactGothic";
   font-weight: 400;
   font-size: 3rem;
   color: #003764;
 }
 
 h3 {
+  font-family: "didactGothic";
   font-size: 1.25rem;
   font-weight: 700;
   color: #96e6b3;
@@ -159,7 +193,7 @@ header .main-nav nav ul li a {
   transition: all 0.3s ease-in-out;
   color: white;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 500;
   padding: 1.25rem;
 }
 header .main-nav nav ul li a:hover {
@@ -228,12 +262,8 @@ header .title .function p span {
 }
 .presentation .container {
   max-width: 1280px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.25rem;
   padding: 3.125rem 0;
   z-index: 2;
@@ -244,16 +274,32 @@ header .title .function p span {
 .presentation .container .left img {
   max-width: 100%;
 }
+.presentation .container .right {
+  display: flex;
+  flex-direction: column;
+}
+.presentation .container .right p {
+  padding: 0.5rem 0;
+}
+.presentation .container .right a {
+  align-self: flex-end;
+  background-color: #96e6b3;
+  color: #003764;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease-in-out;
+}
+.presentation .container .right a:hover {
+  transform: translateY(-0.25rem);
+}
 
 .Competences {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  justify-content: center;
   width: 100%;
   background-image: url("../img/bgMetier.png");
   background-size: cover;
-  flex-direction: column;
 }
 .Competences h2 {
   color: #f7f0f5;
@@ -262,7 +308,7 @@ header .title .function p span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
-  padding: 50px 0;
+  padding: 3.125rem 0;
 }
 
 .outils {
@@ -305,20 +351,94 @@ header .title .function p span {
 }
 
 .contact {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  width: 100%;
+  background-image: url("../img/bg-contact.png");
+  background-size: cover;
+  padding: 6.25rem 1.25rem;
+}
+.contact h2 {
+  color: #f7f0f5;
+}
+.contact .container {
   display: flex;
   justify-content: space-between;
+  gap: 1.25rem;
+}
+.contact .container iframe {
+  padding: 1.25rem 0;
+  width: 50%;
+}
+.contact .container .texte {
+  margin: 1.25rem 0;
+  padding: 1.25rem 0;
+  width: 50%;
+  border-top: 0.125rem solid #96e6b3;
+  border-bottom: 0.125rem solid #96e6b3;
+}
+.contact .container .texte .icon {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.contact .container .texte .icon h3 {
+  color: #f7f0f5;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.contact .container .texte .adr {
+  padding: 1.25rem 0;
+}
+.contact .container .texte .call {
+  padding: 1.25rem 0;
+}
+.contact .container .texte .call .callToAction {
+  display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+  justify-content: space-between;
 }
-.contact iframe {
-  padding: 20px;
-  width: calc(50% - 5px);
+.contact .container .texte .call .callToAction a {
+  background-color: #96e6b3;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0 1.25rem;
+  border-radius: 0.625rem;
+  width: 15.875rem;
+  font-family: "montserrat";
+  font-weight: 500;
+  color: #003764;
+  transition: all 0.3s ease-in-out;
 }
-.contact .texte {
-  margin: 20px 0;
-  width: calc(50% - 5px);
-  border-top: 2px solid #96e6b3;
-  border-top-width: 100%;
-  border-bottom: 2px solid #96e6b3;
-  border-bottom-width: 100%;
+.contact .container .texte .call .callToAction a img {
+  max-height: 2.5rem;
+  max-width: 2.188rem;
+  animation: wiggle 2s linear infinite;
+}
+.contact .container .texte .call .callToAction a:hover {
+  transform: translateY(-0.25rem);
+}
+.contact .container .texte p {
+  color: #f7f0f5;
+}
+
+footer {
+  background-color: #003764;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 0;
+}
+footer img {
+  height: 3.75rem;
+}
+footer p, footer a {
+  color: #96e6b3;
+  font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */
