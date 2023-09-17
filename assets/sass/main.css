@@ -179,14 +179,55 @@ header .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /*----- MENU BURGER -----*/
 }
-header .main-nav img {
-  height: 3.75rem;
-  margin-top: 0.5rem;
+header .main-nav .burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: #96e6b3;
+  cursor: pointer;
+  z-index: 9999;
+}
+header .main-nav .burger-menu span {
+  position: absolute;
+  display: block;
+  width: 1.875rem;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  background-color: #003764;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+header .main-nav .burger-menu span:before, header .main-nav .burger-menu span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.875rem;
+  height: 2px;
+  background-color: #003764;
+  transition: all 0.3s ease-in-out;
+}
+header .main-nav .burger-menu span:before {
+  top: -0.625rem;
+}
+header .main-nav .burger-menu span:after {
+  top: 0.625rem;
 }
 header .main-nav nav {
+  display: flex;
+  align-items: center;
   max-width: 100%;
   padding: 0 1.25rem;
+}
+header .main-nav nav img {
+  height: 3.75rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 header .main-nav nav ul {
   display: flex;
@@ -256,6 +297,53 @@ header .title .function p span {
   color: #ef767a;
 }
 
+@media screen and (max-width: 900px) {
+  header .main-nav {
+    /*BURGER*/
+    /*NAVBAR*/
+  }
+  header .main-nav .burger-menu {
+    display: block;
+  }
+  header .main-nav .burger-menu.burger-open span {
+    background-color: transparent;
+  }
+  header .main-nav .burger-menu.burger-open span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header .main-nav .burger-menu.burger-open span:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header .main-nav nav {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    height: 100dvh;
+    background-color: hsla(207, 100%, 10%, 0.8);
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  header .main-nav nav .logo {
+    margin: 4rem 0 1.25rem 0;
+  }
+  header .main-nav nav.is-open {
+    transform: translateY(0);
+  }
+  header .main-nav nav ul li {
+    display: block;
+    width: 100%;
+  }
+  header .main-nav nav ul li a {
+    margin: 5px 0;
+    font-size: 24px;
+    padding: 1.25rem 0;
+  }
+}
 .presentation {
   display: grid;
   grid-template-columns: auto;
@@ -271,7 +359,7 @@ header .title .function p span {
 .presentation .container {
   max-width: 1280px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.25rem;
   padding: 3.125rem 0;
   z-index: 2;
@@ -455,4 +543,31 @@ footer p,
 footer a {
   color: #96e6b3;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 890px) {
+  header .title .function p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .title h1 {
+    font-size: 2.5rem;
+  }
+  header .title .function p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  header .title .function p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  header .title h1 {
+    font-size: 2rem;
+  }
+  header .title .function p {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=main.css.map */
