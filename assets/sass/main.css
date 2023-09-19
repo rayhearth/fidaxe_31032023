@@ -108,6 +108,14 @@ img {
   display: block;
 }
 
+@media screen and (max-width: 890px) {
+  h2 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 1.25rem;
+  }
+}
 .cards {
   display: flex;
   flex-direction: column;
@@ -182,14 +190,15 @@ header .main-nav {
   /*----- MENU BURGER -----*/
 }
 header .main-nav .burger-menu {
+  cursor: pointer;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
+  border-radius: 0.313rem;
   width: 3.125rem;
   height: 3.125rem;
   background-color: #96e6b3;
-  cursor: pointer;
   z-index: 9999;
 }
 header .main-nav .burger-menu span {
@@ -317,26 +326,27 @@ header .title .function p span {
     top: 0;
   }
   header .main-nav nav {
-    position: absolute;
+    position: fixed;
     z-index: 50;
     top: 0;
     height: 100dvh;
     background-color: hsla(207, 100%, 10%, 0.8);
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
+    transform: translateX(-100%);
+    transition: all 1s ease;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
   header .main-nav nav .logo {
-    margin: 4rem 0 1.25rem 0;
+    margin: 4rem auto;
   }
   header .main-nav nav.is-open {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   header .main-nav nav ul li {
     display: block;
     width: 100%;
+    text-align: center;
   }
   header .main-nav nav ul li a {
     margin: 5px 0;
@@ -398,6 +408,7 @@ header .title .function p span {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  margin: 0 auto;
   padding: 0 2.5rem;
 }
 .Competences .section-container h2 {
@@ -533,6 +544,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1.25rem;
   padding: 2rem 0;
 }
@@ -544,10 +556,39 @@ footer a {
   color: #96e6b3;
   font-size: 1rem;
 }
+footer p {
+  padding: 1rem;
+  text-align: center;
+}
 
 @media screen and (max-width: 890px) {
   header .title .function p {
     font-size: 2rem;
+  }
+  .presentation .container {
+    grid-template-columns: inherit;
+  }
+  .Competences .section-container .cards-comp {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .outils {
+    grid-template-rows: 1fr;
+  }
+  .contact {
+    padding: 1rem;
+  }
+  .contact .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .container .texte {
+    width: 100%;
+  }
+  .contact .container .texte .call .callToAction {
+    justify-content: center;
+  }
+  .contact .container iframe {
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {

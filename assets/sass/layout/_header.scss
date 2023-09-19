@@ -13,14 +13,15 @@ header {
         /*----- MENU BURGER -----*/
 
         .burger-menu {
+            cursor: pointer;
             display: none;
             position: fixed;
             top: 0;
             left: 0;
+            border-radius: 0.313rem;
             width: 3.125rem;
             height: 3.125rem;
             background-color: $green;
-            cursor: pointer;
             z-index: 9999;
             span {
                 position: absolute;
@@ -159,26 +160,27 @@ header {
 
             /*NAVBAR*/
             nav {
-                position: absolute;
+                position: fixed;
                 z-index: 50;
                 top: 0;
                 height: 100dvh;
                 background-color: hsla(207, 100%, 10%, 0.8);
-                transform: translateY(-100%);
-                transition: all 0.3s ease-in-out;
+                transform: translateX(-100%);
+                transition: all 1s ease;
                 display: flex;
                 align-items: flex-start;
                 flex-direction: column;
                 .logo {
-                    margin: 4rem 0 1.25rem 0;
+                    margin: 4rem auto;
                 }
                 &.is-open {
-                    transform: translateY(0);
+                    transform: translateX(0);
                 }
                 ul {
                     li {
                         display: block;
                         width: 100%;
+                        text-align: center;
                         a {
                             margin: 5px 0;
                             font-size: 24px;

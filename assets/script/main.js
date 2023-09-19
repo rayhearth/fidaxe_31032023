@@ -1,10 +1,15 @@
 const burgerMenu = document.getElementById('burger-menu');
-console.log(burgerMenu)
 const nav = document.getElementById('navbar');
-const liItems = document.querySelectorAll('.nav-links li');
+const liItems = document.querySelectorAll('ul > li');
 
 burgerMenu.addEventListener('click', function () {
-    console.log('hi');
     this.classList.toggle("burger-open");
     nav.classList.toggle("is-open");
+});
+
+liItems.forEach(function (liItem) {
+    liItem.addEventListener('click', function () {
+        burgerMenu.classList.remove("burger-open");
+        nav.classList.remove("is-open");
+    });
 });
