@@ -284,6 +284,37 @@ footer {
             }
         }
     }
+    .presentation {
+        .container {
+            padding: 0 0;
+        }
+    }
+
+    .Competences {
+        .section-container {
+            padding: 0 0;
+        }
+    }
+
+    .outils {
+        width: 100%;
+        grid-gap: 1rem;
+        grid-template-areas:
+            "solutions"
+            "intro"
+            "dispo"
+            "security"
+            "simplicity"
+            "economie";
+    }
+
+    .secteurs {
+        padding: 1.25rem;
+        img {
+            height: 90%;
+            width: 90%;
+        }
+    }
 }
 
 @media screen and (max-width: 320px) {
