@@ -193,8 +193,8 @@ header .main-nav .burger-menu {
   cursor: pointer;
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0.25rem;
+  left: 0.25rem;
   border-radius: 0.313rem;
   width: 3.125rem;
   height: 3.125rem;
@@ -330,6 +330,7 @@ header .title .function p span {
     z-index: 50;
     top: 0;
     height: 100dvh;
+    width: 100%;
     background-color: hsla(207, 100%, 10%, 0.8);
     transform: translateX(-100%);
     transition: all 1s ease;
@@ -343,6 +344,9 @@ header .title .function p span {
   header .main-nav nav.is-open {
     transform: translateX(0);
   }
+  header .main-nav nav ul {
+    width: 100%;
+  }
   header .main-nav nav ul li {
     display: block;
     width: 100%;
@@ -351,7 +355,19 @@ header .title .function p span {
   header .main-nav nav ul li a {
     margin: 5px 0;
     font-size: 24px;
-    padding: 1.25rem 0;
+    padding: 0.25rem 0.5rem;
+  }
+  header .main-nav nav ul li a:hover::after {
+    bottom: -0.6rem;
+    height: 0.25rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .title {
+    height: 90%;
+  }
+  header .title .function {
+    margin-top: 3.25rem;
   }
 }
 .presentation {
@@ -436,6 +452,10 @@ header .title .function p span {
 .outils .intro {
   grid-area: intro;
 }
+.outils .intro span {
+  font-weight: bold;
+  color: #003764;
+}
 .outils .dispo {
   grid-area: dispo;
 }
@@ -453,7 +473,7 @@ header .title .function p span {
   max-width: 1280px;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 1.25rem;
 }
 .secteurs img {
   height: 60%;
@@ -598,13 +618,16 @@ footer p {
   header .title .function p {
     font-size: 1.5rem;
   }
+  .presentation h2 {
+    padding: 0;
+  }
+  .presentation .container {
+    padding: 0 0;
+  }
 }
 @media screen and (max-width: 460px) {
   header .title .function p {
     font-size: 1rem;
-  }
-  .presentation .container {
-    padding: 0 0;
   }
   .Competences .section-container {
     padding: 0 0;
@@ -614,12 +637,15 @@ footer p {
     grid-gap: 1rem;
     grid-template-areas: "solutions" "intro" "dispo" "security" "simplicity" "economie";
   }
+  .outils .details .title {
+    flex-direction: column;
+  }
   .secteurs {
     padding: 1.25rem;
   }
   .secteurs img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 320px) {

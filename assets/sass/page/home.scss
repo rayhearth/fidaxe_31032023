@@ -84,6 +84,10 @@
     }
     .intro {
         grid-area: intro;
+        span {
+            font-weight: bold;
+            color: $dark-blue;
+        }
     }
     .dispo {
         grid-area: dispo;
@@ -103,7 +107,7 @@
     max-width: 1280px;
     display: flex;
     flex-direction: column;
-    padding: 2.5rem;
+    padding: 1.25rem;
     img {
         height: 60%;
         margin: 0 auto;
@@ -272,6 +276,15 @@ footer {
             }
         }
     }
+
+    .presentation {
+        h2 {
+            padding: 0;
+        }
+        .container {
+            padding: 0 0;
+        }
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -282,11 +295,6 @@ footer {
                     font-size: 1rem;
                 }
             }
-        }
-    }
-    .presentation {
-        .container {
-            padding: 0 0;
         }
     }
 
@@ -306,13 +314,18 @@ footer {
             "security"
             "simplicity"
             "economie";
+        .details {
+            .title {
+                flex-direction: column;
+            }
+        }
     }
 
     .secteurs {
         padding: 1.25rem;
         img {
-            height: 90%;
-            width: 90%;
+            height: 100%;
+            width: 100%;
         }
     }
 }
