@@ -7,7 +7,53 @@
     <title>Fidaxe</title>
 
     <!--- TARTEAUCITRON --->
-    <script type="module" src="./tarteaucitron.js-1.14.0/tarteaucitron.js"></script>
+    <script src="./tarteaucitron.js-1.14.0/tarteaucitron.js"></script>
+
+        <script type="text/javascript">
+        tarteaucitron.init({
+    	  "privacyUrl": "", /* Privacy policy url */
+          "bodyPosition": "bottom", /* or top to bring it as first element for accessibility */
+
+    	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+    	  "cookieName": "tarteaucitron", /* Cookie name */
+    
+    	  "orientation": "bottom", /* Banner position (top - bottom) */
+
+          "groupServices": false, /* Group services by category */
+          "showDetailsOnClick": true, /* Click to expand the description */
+          "serviceDefaultState": "wait", /* Default state (true - wait - false) */
+
+    	  "showAlertSmall": false, /* Show the small banner on bottom right */
+    	  "cookieslist": true, /* Show the cookie list */
+
+          "closePopup": false, /* Show a close X on the banner */
+
+          "showIcon": true, /* Show cookie icon to manage cookies */
+          //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+          "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
+
+    	  "adblocker": false, /* Show a Warning if an adblocker is detected */
+
+          "DenyAllCta" : true, /* Show the deny all button */
+          "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+          "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+                            
+    	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+    	  "removeCredit": false, /* Remove credit link */
+    	  "moreInfoLink": true, /* Show more info link */
+
+          "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+          "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+
+    	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+          "readmoreLink": "", /* Change the default readmore link */
+
+          "mandatory": true, /* Show a message about mandatory cookies */
+          "mandatoryCta": true /* Show the disabled accept button when mandatory on */
+        });
+        </script>
 
     <!--    FAVICON------------------------------------>
     <link rel="shortcut icon" type="image/Logo" href="./assets/img/favicon.ico">
@@ -71,8 +117,12 @@
                         à Verquin dans le département du Pas-de-Calais. Il est dirigé par Madame Natacha ANSART
                         expert-omptable et commissaire aux comptes depuis 2011. La force de notre cabinet est sa
                         proximité avec ses clients et sa réactivité.</p>
-                    <img src="./assets/img/presentationdir.png"
-                        alt="image représentant Madame Natacha Ansart directrice du cabinet d'expertise comptable et de commissariat aux comptes Fidaxe">
+                        <picture>
+                            <source srcset="./assets/img/presentationdir.webp" type="image/webp">
+                            <source srcset="./assets/img/presentationdir.png" type="image/png">
+                            <img src="./assets/img/presentationdir.png"
+                                alt="image représentant Madame Natacha Ansart directrice du cabinet d'expertise comptable et de commissariat aux comptes Fidaxe">
+                        </picture>
                 </article>
 
                 <div class="right">
@@ -344,8 +394,12 @@
         <!-- --------------------METIERS-------------------- -->
         <section class="secteurs" id="secteurs">
             <h2>Nos secteurs d’activité</h2>
-            <img src="./assets/img/secteur_act.png"
+            <picture>
+                <source srcset="./assets/img/secteur_act.webp" type="image/webp">
+                <source srcset="./assets/img/secteur_act.png" type="image/png">
+                <img src="./assets/img/secteur_act.png"
                 alt="image représentant les divers secteurs d'activités dans lesquels Fidaxe intervient tel que le transport, l'artisanat, les sociétés immobilières, la culture, la restauration, etc...">
+            </picture>
         </section>
 
         <!-- --------------------CONTACT-------------------- -->
@@ -381,15 +435,9 @@
 
                         </div>
                     </div>
-
-
                 </div>
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.7712514052514!2d2.6493864158974496!3d50.50121499158637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd22df7a2b9c53%3A0x40149fd8b4b29f5a!2sFidaxe%20Expertise%20Comptable!5e0!3m2!1sfr!2sfr!4v1680710666749!5m2!1sfr!2sfr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
-                    allowfullscreen="" loading="lazy"></iframe>
+                    <iframe width="WIDTH" height="HEIGHT" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.7712514052514!2d2.6493864158974496!3d50.50121499158637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd22df7a2b9c53%3A0x40149fd8b4b29f5a!2sFidaxe%20Expertise%20Comptable!5e0!3m2!1sfr!2sfr!4v1680710666749!5m2!1sfr!2sfr" allowfullscreen> </iframe>
             </div>
         </section>
 
@@ -401,6 +449,10 @@
     </footer>
 
     <script type="module" src="./assets/script/main.js"></script>
+
+    <script type="text/javascript">
+        (tarteaucitron.job = tarteaucitron.job || []).push('googlemapssearch');
+        </script>
 
 </body>
 

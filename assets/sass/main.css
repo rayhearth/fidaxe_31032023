@@ -176,7 +176,7 @@ img {
 }
 
 header {
-  background-image: url("../img/bg_header.png");
+  background-image: url("../img/bg_header.webp");
   background-size: cover;
   height: 100dvh;
   display: flex;
@@ -416,7 +416,7 @@ header .title .function p span {
 
 .Competences {
   width: 100%;
-  background-image: url("../img/bgMetier.png");
+  background-image: url("../img/bgMetier.webp");
   background-size: cover;
 }
 .Competences .section-container {
@@ -487,7 +487,7 @@ header .title .function p span {
   grid-template-rows: auto;
   justify-content: center;
   width: 100%;
-  background-image: url("../img/bg-contact.png");
+  background-image: url("../img/bg-contact.webp");
   background-size: cover;
   padding: 6.25rem 1.25rem;
 }
