@@ -4,8 +4,9 @@
     grid-template-rows: auto;
     justify-content: center;
     width: 100%;
-    background-image: url("../img/bg-about.png");
-    background-size: cover;
+    background:
+        url("../img/top-about.svg") no-repeat top left,
+        url("../img/bottom-about.svg") no-repeat bottom right;
     h2 {
         padding: 0 2.5rem;
     }

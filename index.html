@@ -15,77 +15,20 @@
     <meta name="og : title" property="og : title" content="Le nom de votre article">
     <meta name="og : title" property="og : title" content="Le nom de votre article">
 
-    <!--- TARTEAUCITRON --->
-    <script src="./tarteaucitron.js-1.14.0/tarteaucitron.js"></script>
+    <!--- aceptio --->
+    <script>
+        window.axeptioSettings = {
+            clientId: "652008d6fe61ee14597052ee",
+            cookiesVersion: "fidaxe-fr",
+        };
 
-    <script type="text/javascript">
-        tarteaucitron.init({
-            "privacyUrl": "",
-            /* Privacy policy url */
-            "bodyPosition": "bottom",
-            /* or top to bring it as first element for accessibility */
-
-            "hashtag": "#tarteaucitron",
-            /* Open the panel with this hashtag */
-            "cookieName": "tarteaucitron",
-            /* Cookie name */
-
-            "orientation": "bottom",
-            /* Banner position (top - bottom) */
-
-            "groupServices": false,
-            /* Group services by category */
-            "showDetailsOnClick": true,
-            /* Click to expand the description */
-            "serviceDefaultState": "wait",
-            /* Default state (true - wait - false) */
-
-            "showAlertSmall": false,
-            /* Show the small banner on bottom right */
-            "cookieslist": true,
-            /* Show the cookie list */
-
-            "closePopup": false,
-            /* Show a close X on the banner */
-
-            "showIcon": true,
-            /* Show cookie icon to manage cookies */
-            //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
-            "iconPosition": "BottomRight",
-            /* BottomRight, BottomLeft, TopRight and TopLeft */
-
-            "adblocker": false,
-            /* Show a Warning if an adblocker is detected */
-
-            "DenyAllCta": true,
-            /* Show the deny all button */
-            "AcceptAllCta": true,
-            /* Show the accept all button when highPrivacy on */
-            "highPrivacy": true,
-            /* HIGHLY RECOMMANDED Disable auto consent */
-
-            "handleBrowserDNTRequest": false,
-            /* If Do Not Track == 1, disallow all */
-
-            "removeCredit": false,
-            /* Remove credit link */
-            "moreInfoLink": true,
-            /* Show more info link */
-
-            "useExternalCss": false,
-            /* If false, the tarteaucitron.css file will be loaded */
-            "useExternalJs": false,
-            /* If false, the tarteaucitron.js file will be loaded */
-
-            //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
-
-            "readmoreLink": "",
-            /* Change the default readmore link */
-
-            "mandatory": true,
-            /* Show a message about mandatory cookies */
-            "mandatoryCta": true /* Show the disabled accept button when mandatory on */
-        });
+        (function (d, s) {
+            let t = d.getElementsByTagName(s)[0],
+                e = d.createElement(s);
+            e.async = true;
+            e.src = "//static.axept.io/sdk.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
     </script>
 
     <!--    FAVICON------------------------------------>
@@ -101,9 +44,32 @@
     <!--	CSS------------------------------------------------>
     <link href="./assets/sass/main.css" rel="stylesheet" type="text/css" />
 
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KBBLLFKJ');
+    </script>
+    <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBBLLFKJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header id="accueil">
         <div class="main-nav">
 
@@ -153,7 +119,7 @@
                     <picture>
                         <source srcset="./assets/img/presentationdir.webp" type="image/webp">
                         <source srcset="./assets/img/presentationdir.png" type="image/png">
-                        <img src="./assets/img/presentationdir.png"
+                        <img src="./assets/img/presentationdir.webp"
                             alt="image représentant Madame Natacha Ansart directrice du cabinet d'expertise comptable et de commissariat aux comptes Fidaxe">
                     </picture>
                 </article>
@@ -430,7 +396,7 @@
             <picture>
                 <source srcset="./assets/img/secteur_act.webp" type="image/webp">
                 <source srcset="./assets/img/secteur_act.png" type="image/png">
-                <img src="./assets/img/secteur_act.png"
+                <img src="./assets/img/secteur_act.webp"
                     alt="image représentant les divers secteurs d'activités dans lesquels Fidaxe intervient tel que le transport, l'artisanat, les sociétés immobilières, la culture, la restauration, etc...">
             </picture>
         </section>
@@ -470,16 +436,19 @@
                     </div>
                 </div>
 
-                <iframe width="WIDTH" height="HEIGHT" frameborder="0" style="border:0"
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.7712514052514!2d2.6493864158974496!3d50.50121499158637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd22df7a2b9c53%3A0x40149fd8b4b29f5a!2sFidaxe%20Expertise%20Comptable!5e0!3m2!1sfr!2sfr!4v1680710666749!5m2!1sfr!2sfr"
-                    allowfullscreen> </iframe>
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
+                    allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
     </main>
     <footer>
         <img src="./assets/img/LOGO_FIDAXE.png" alt="logo du cabinet d'expertise comptable fidaxe">
-        <p>Tous droits réservés , ce site est la propriété légale de ©Fidaxe <a href=""> Charte Graphique, Webdesign et
+        <p>Tous droits réservés , ce site est la propriété légale de ©Fidaxe <a href="https://www.jemma-design.fr/">
+                Charte Graphique, Webdesign et
                 développement par Emmanuelle Jupon.</a></p>
     </footer>
 

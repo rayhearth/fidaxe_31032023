@@ -15,11 +15,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "montserrat", "didactGothic", "DM Sans", "Lato", "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "montserrat", "didactGothic", "DM Sans", "Lato", "Roboto", sans-serif;
     margin: 0 auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 main {
